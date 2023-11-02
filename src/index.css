@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap");
+
+@layer html {
+  :root {
+    --toastify-color-light: #7c3aed;
+    --toastify-text-color-light: #ddd6fe;
+  }
+
+  input,
+  select,
+  textarea {
+    background-color: transparent;
+    display: block;
+  }
+
+  .select-img {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(65, 84, 98)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-position: center right 1px;
+    background-size: 1rem auto;
+    background-repeat: no-repeat;
+  }
+
+  .radio:has(input:checked) {
+    color: #a78bfa;
+    font-weight: bold;
+  }
+
+  select:disabled {
+    background-image: none;
+  }
+
+  .outlet-border {
+    border-color: #020617;
+    border-width: 4px;
+    border-radius: 0.75rem;
+  }
+
+  .active {
+    background-color: #4c1d95;
+    border-radius: 0.375rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .outlet-border {
+      border-image: linear-gradient(to bottom, #1e293b, #020617) 1;
+      border-width: 4px;
+      border-radius: 0rem;
+    }
+    .active {
+      background-color: #6d28d9;
+      border-radius: 0.375rem;
+    }
+    option {
+      background-color: #cbd5e1;
+      color: #0f172a;
+    }
+  }
+
+  #root .toast {
+    color: #6d28d9 !important;
+  }
+  #root .toast-body {
+    color: #6d28d9 !important;
+  }
+  #root .toast-rounded {
+    border-radius: 6px !important;
+    background-color: #e4e0fa !important;
+  }
+  /* #root .toast-progress {
+    background: #6d28d9 !important;
+  } */
+}
